@@ -7,17 +7,35 @@ class Form extends Component {
     /*
             TODO - set initial state for link name and URL 
         */
+            this.state = {
+              name:'',
+              URL:''
+  
+          }
   }
 
-  handleChange = (event) => {
+  handleNameChange = (event) => {
     /*
             TODO - Logic for changing state based on form changes
         */
+            this.setState({
+              name: event.target.value
+          })
+  }
+  handleUrlChange = (event) => {
+    /*
+            TODO - Logic for changing state based on form changes
+        */
+            this.setState({
+              URL: event.target.value
+          })
   }
 
   onFormSubmit = (event) => {
     // to prevent page reload on form submit
     event.preventDefault()
+    this.props.handleSubmit(this.state)
+    //console.log(this.state)
 
     /*
             TODO - Logic for calling props to handle submission and setting state changes
@@ -26,8 +44,12 @@ class Form extends Component {
 
   render() {
     return (
-      <form>
-        {/* TODO - Logic for returning a form element with labels and inputs for link name and URL */}
+      <form onSubmit={this.onFormSubmit}>
+        <label>name</label>
+        <input type="text" onChange={this.handleNameChange}/>
+        <label>URL</label>
+        <input type="text" onChange={this.handleUrlChange}/>
+        <input type="submit" value="Submit"/>
       </form>
     )
   }
