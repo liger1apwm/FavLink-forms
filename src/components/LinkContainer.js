@@ -30,7 +30,7 @@ class LinkContainer extends React.Component {
     this.setState({
       favLink:[...this.state.favLink, newLink]
     });
-    console.log(favLink)
+    
 
     //alert("Hey!!")
     /*
@@ -39,7 +39,7 @@ class LinkContainer extends React.Component {
   }
 
   render() {
-    console.log(this.props)
+    console.log(this.state)
     return (
       <div className="container">
         <h1>My Favorite Links</h1>

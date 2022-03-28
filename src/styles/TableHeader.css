@@ -1,0 +1,7 @@
+.table-header::after, .table-header::before {
+    display: flex;
+    content: "";
+    height: 2px;
+    background: black;
+    width: 1000%;
+  }

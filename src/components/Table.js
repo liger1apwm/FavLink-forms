@@ -1,9 +1,11 @@
 import React from 'react'
+import '../styles/TableHeader.css'
+import '../styles/TableBody.css'
 
 const TableHeader = () => {
   // boilerplate table header functional component
   return (
-    <thead>
+    <thead className='table-header'>
       <tr>
         <th>Name</th>
         <th>URL</th>
@@ -18,7 +20,7 @@ const TableBody = (props) => {
   // we use Array.map to create table rows from LinkData passed via props
   const rows = props.linkData.map((row, index) => {
     return (
-      <tr key={index}>
+      <tr className='table-body' key={index}>
         <td>{row.name}</td>
         <td>
           <a href={row.URL}>{row.URL}</a>
