@@ -47,7 +47,7 @@ class Form extends Component {
       <form onSubmit={this.onFormSubmit} className="form-style">
         <label>name</label>
         <input type="text" onChange={this.handleNameChange} style={{width: "500px",height:"25px"}}/>
-        <label>URL</label>
+        <label>URL (use www.yoursite.com format)</label>
         <input type="text" onChange={this.handleUrlChange}  style={{width: "500px",height:"25px"}}/>
         
         <input className='bubbly-button' type="submit" value="Submit"/>
